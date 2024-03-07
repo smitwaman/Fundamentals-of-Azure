@@ -1,3 +1,26 @@
+Availability Sets in Azure
+
+●	An Update Domainand a Fault Domainis assigned to each VM in an Availability Zone
+●	Fault domains define the group of virtual machines that share a common power source and network switch
+
+●	Update domains are used for patching of the virtual machines. All virtual machines within an update domain will reboot together.
+
+●	By default Availability Sets have two Fault Domains, each sharing a common power source and network switch, and VMs are automatically separated across the Fault Domains.
+
+●	The number of Fault Domains in an Availability Set isn't exact, and the only guarantee that not all the VMs in the set will fail together.
+
+●	Availability Sets are assigned five Update Domains, and VMs are grouped into these Update Domains automatically.
+
+●	When a sixth VM is added to an Availability Set, it is assigned to the first Update Domain, and the seventh VM to the second Update Domain, etc. So the first and the sixth VMs added to an Availability Set could be rebooted at the same time in the instance of a planned maintenance event.
+
+●	Only one Update Domain is ever rebooted at a time, but the reboot order isn't necessarily sequential, so the fifth Update Domain could be rebooted before the first.
+●	Horizontal Scaling- The auto scale feature of Azure Monitor only scales horizontally, which is an increase ("out") or decrease ("in") of the number of VMs
+
+●	Virtual Scaling- Vertical scaling keeps the same number of VMs, but makes the more 'up") or less ("down") powerful. Power is measured in attributes such as memory, CPU speed, or disk space. Vertical scaling is dependent on the availability of larger hardware, which quickly hits an upper limit and can vary by region.
+
+●	Azure virtual machine scale sets let you create a set of identical load-balanced VMs which can be set to automatically scale up or scale down depending on requirements or a defined schedule.
+
+
 To deploy Azure Virtual Machines with Availability Sets using a JSON template, follow these step-by-step instructions:
 
 1. **Define the ARM Template**: Create a JSON file that defines the infrastructure resources including the Availability Set. Below is a simplified example of an ARM template:
