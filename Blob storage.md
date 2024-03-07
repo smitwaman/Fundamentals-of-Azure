@@ -1,3 +1,116 @@
+Azure Storage, Blob Storage
+
+
+
+●	Azure Storage offers the following options
+
+
+
+○	Blob Storage: Massively scalable object store for data objects. It is suitable for
+
+■	HTTP based file retrieval
+
+
+
+■	Distributed file access
+
+
+
+■	Media Streaming
+
+
+
+■	Log and archival purposes
+
+
+
+■	Data analysis
+
+
+
+○	File Storage: File system storage for the cloud. This is ideal for
+
+■	Replacing or supplementing on-premises storage
+
+
+
+■	“Lift and Shift application”
+
+
+
+■	Shared application settings
+
+
+
+■	Development purposes
+
+
+
+○	Table Storage: This is a NoSQL based storage system. It can be used for
+
+■	Storage of high volume structured data
+
+
+
+■	Storing datasets without complex joins and foreign keys
+
+
+
+■	Querying data with clustered indices
+
+
+
+■	Accessing data using the OData protocol and LINQ queries
+
+
+
+○	Storage Queue: Messaging storage for reliable messaging. This is used for
+
+■	Storing a list of asynchronous tasks
+
+
+
+■	Passing messages from an Azure web role to a worker role
+
+
+
+●	The different storage options available are
+
+
+
+○	Standard: Uses Magnetic drives and is best for bulk storage or infrequently accessed data
+
+
+
+○	Premium : Uses Solid State drives and is best used for IO intensive applications, like databases, and Azure Virtual Machine drives.
+
+
+
+●	The following replication options are available
+
+
+
+○	Locally Redundant Storage (LRS): The replicas are created in the same datacenter as the original
+
+
+
+○	Geo-Redundant Storage(GRS): The replicas are created in a different geographical region
+
+
+
+○	Read-Access Geo-Redundant Storage(RA-GRS): The replicas are created in a different geographical region, but with reduced performance and in read-only mode.
+
+
+
+●	The NuGet Package provides the APIs for the SDKs provided by Microsoft.
+
+ 
+
+
+
+
+
+
 **Azure Storage Options: Blob Storage**
 
 Azure Blob Storage is a scalable object store designed to store large amounts of unstructured data. Here's a detailed explanation along with deployment steps on Azure:
