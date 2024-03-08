@@ -174,3 +174,88 @@ Azure Blob Storage is a scalable object store designed to store large amounts of
 
 This JSON example demonstrates creating a Blob Storage account with GRS replication and two blob containers, one with private access and the other with public access.
 
+Here's a step-by-step JSON template for creating Azure Storage resources:
+
+1. Define Azure Storage options:
+
+```json
+{
+  "Azure_Storage": {
+    "Blob_Storage": {
+      "Description": "Massively scalable object store for data objects.",
+      "Suitable_for": [
+        "HTTP based file retrieval",
+        "Distributed file access",
+        "Media Streaming",
+        "Log and archival purposes",
+        "Data analysis"
+      ]
+    },
+    "File_Storage": {
+      "Description": "File system storage for the cloud.",
+      "Ideal_for": [
+        "Replacing or supplementing on-premises storage",
+        "Lift and Shift application",
+        "Shared application settings",
+        "Development purposes"
+      ]
+    },
+    "Table_Storage": {
+      "Description": "NoSQL based storage system.",
+      "Use_cases": [
+        "Storage of high volume structured data",
+        "Storing datasets without complex joins and foreign keys",
+        "Querying data with clustered indices",
+        "Accessing data using the OData protocol and LINQ queries"
+      ]
+    },
+    "Storage_Queue": {
+      "Description": "Messaging storage for reliable messaging.",
+      "Used_for": [
+        "Storing a list of asynchronous tasks",
+        "Passing messages from an Azure web role to a worker role"
+      ]
+    }
+  }
+}
+```
+
+2. Define different storage options:
+
+```json
+{
+  "Storage_Options": {
+    "Standard": {
+      "Description": "Uses Magnetic drives.",
+      "Best_for": "Bulk storage or infrequently accessed data"
+    },
+    "Premium": {
+      "Description": "Uses Solid State drives.",
+      "Best_for": "IO intensive applications, like databases, and Azure Virtual Machine drives."
+    }
+  }
+}
+```
+
+3. Define replication options:
+
+```json
+{
+  "Replication_Options": {
+    "Locally_Redundant_Storage (LRS)": "The replicas are created in the same datacenter as the original.",
+    "Geo_Redundant_Storage (GRS)": "The replicas are created in a different geographical region.",
+    "Read_Access_Geo_Redundant_Storage (RA-GRS)": "The replicas are created in a different geographical region, but with reduced performance and in read-only mode."
+  }
+}
+```
+
+4. Define NuGet package information:
+
+```json
+{
+  "NuGet_Package": "Provides the APIs for the SDKs provided by Microsoft."
+}
+```
+
+Combine these steps into a single JSON template as per your requirement.
+
