@@ -1,3 +1,21 @@
+Azure API management 
+
+●	Publish APIs for external, internal and partner developers
+
+
+
+●	Provides statistics on developer engagement and other analytics required
+
+
+
+●	Uses API keys to track and authenticate API calls
+
+ 
+
+
+
+
+
 Creating and implementing an API management solution involves several steps. Below is a step-by-step guide along with JSON templates for each step:
 
 **Step 1: Create an API Management Instance**
