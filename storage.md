@@ -173,3 +173,4 @@ Azure Blob Storage is a scalable object store designed to store large amounts of
 ```
 
 This JSON example demonstrates creating a Blob Storage account with GRS replication and two blob containers, one with private access and the other with public access.
+
