@@ -4,6 +4,11 @@
 
 ●	This includes health equipment,environmental sensors,smart appliances etc.
 
+●	Protocol Gateway bridges the traffic using AMQP 1.0 protocol.
+●	Protocol gateway can be deployed using Azure Service Fabric,Azure Cloud Services worker roles or Windows Virtual Machines, or can be deployed on-premises.
+
+
+
 Sure, I'll guide you through the step-by-step creation of an Azure IoT resource:
 
 1. **Sign in to the Azure Portal**:
